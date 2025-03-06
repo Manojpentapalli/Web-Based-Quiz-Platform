@@ -1,0 +1,34 @@
+.results-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.results-page h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.results-page p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.results-page button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.results-page button:hover {
+    background-color: #0056b3;
+}

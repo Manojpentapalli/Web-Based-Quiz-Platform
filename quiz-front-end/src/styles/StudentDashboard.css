@@ -1,0 +1,149 @@
+/* Overall dashboard container */
+.dashboard-container {
+  display: flex;
+  justify-content: center; /* Centers the right panel */
+  align-items: flex-start;
+  padding: 20px;
+  min-height: 80vh;
+  background-color: #f4f6f9; /* Light gray background */
+  padding-top: 80px; /* Prevent content from hiding under the fixed header */
+  width: 100%;
+}
+
+/* Left panel styling */
+.left-panel {
+  width: 250px; /* Fixed width */
+  background-color: #2c3e50; /* Dark blue */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  position: fixed; /* Fix it to the left */
+  left: 0;
+  top: 60px; /* Below the fixed header */
+  bottom: 0;
+}
+
+/* Right panel styling */
+.right-panel {
+  flex-grow: 1;
+  max-width: 70%; /* Reduce width to center it properly */
+  margin-left: 280px; /* Leave space for the fixed left panel */
+}
+
+/* Grid container for test cards */
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Row layout */
+.grid-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+/* Individual test card */
+.grid-col-3 {
+  background-color: white;
+  flex: 1;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #ddd;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid-col-3:hover {
+  transform: translateY(-5px);
+  box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Test details */
+.test-details-container {
+  margin-top: 10px;
+}
+
+.test-details {
+  color: #555;
+  font-size: 16px;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-panel {
+    position: static; /* Make it normal for small screens */
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .right-panel {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .grid-row {
+    flex-direction: column;
+  }
+
+  .grid-col-3 {
+    width: 100%;
+  }
+}
+
+/* Button container */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Space between buttons */
+  margin-top: 50px;
+}
+
+.user-id {
+  margin-top: 20px; /* Space from the header */
+  text-align: center; /* Center align */
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c3e50; /* Dark blue */
+}
+
+/* General button styling */
+.btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  color: white;
+}
+
+/* Leaderboard button */
+.btn-leaderboard {
+  background-color: #1abc9c; /* Teal */
+}
+
+.btn-leaderboard:hover {
+  background-color: #16a085; /* Darker teal */
+}
+
+/* View Progress button */
+.btn-progress {
+  background-color: #3498db; /* Blue */
+}
+
+.btn-progress:hover {
+  background-color: #2980b9; /* Darker blue */
+}
